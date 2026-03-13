@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>A Life of Possibility</title>
-        <link rel="stylesheet" href="styles.css" />
-        <!-- Font Awesome CDN -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>A Life of Possibility | About</title>
+        <link rel="stylesheet" href="styles.css">
+
+        <!-- Font Awesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     </head>
     <body>
-
         <!-- Header -->
         <header class="header">
             <div class="container nav">
@@ -20,48 +20,99 @@
                     <a href="/index.html">Home</a>
                     <a href="/about.html">About</a>
                     <a href="#">Resources</a>
-                    <a href="#">Stories</a>
                     <a href="#">Contact Us</a>
                 </nav>
             </div>
         </header>
-        <main class="about">
-            <div class="header-container">
-                <h2>About Us</h2>
-                <p>
-                    A Life of Possibility was created to support immigrants and refugees building new lives in the United States. 
-                    Starting over in a new country can feel confusing and overwhelming. Our goal is to provide clear, reliable 
-                    information and encouragement to help make that journey easier.
+        <main class="container">
+            <!-- About Introduction -->
+            <section class="about-intro">
+                <div>
+                    <h1>About Us</h1>
+                    <p>
+                        A Life of Possibility was created to support immigrants and refugees building new lives in the United States.
+                        Starting over in a new country can feel confusing and overwhelming.
+                        Our goal is to provide clear, reliable information and encouragement to help make that journey easier.
+                    </p>
+                    <p>
+                        This website offers guidance on navigating the U.S. education system, finding scholarship opportunities,
+                        and building a balanced, meaningful life.
+                    </p>
+                    <p>
+                        We believe that with the right information, support, and determination,
+                        a stable and fulfilling future is possible.
+                    </p>
+                </div>
+                <div>
+                    <img src="./education.jpg" alt="refugees image">
+                </div>
+
+            </section>
+            <!-- Mission -->
+            <section class="about-section">
+                <h2>Our Mission</h2>
+                <p style="max-width:700px;margin:auto;">
+                    Our mission is to provide practical information and encouragement for immigrants and refugees
+                    pursuing education, opportunity, and stability in the United States.
+                    We aim to simplify complex systems and highlight pathways that lead to growth,
+                    independence, and long-term success.
                 </p>
-            </div>
-            <div class="main-container">
-                <div class="about-col">
-                    <div class="about-card">
-                        <p>
-                            This website offers guidance on navigating the U.S. education systems, finding scholarship opportunities, 
-                            and building a balanced, meaningful life. We also share real stories from individuals who have faced challenges, 
-                            worked hard, and created success through persistence and hope.
-                        </p>
-                        <p>
-                            We believe that progress takes time, and every journey is different. With the right information, support, and 
-                            determination, a stable and fulfilling future is possible.
-                        </p>
-                        <p>
-                            This space is here to inform, inspire, and remind you that you are not alone.
-                        </p>
+            </section>
+            <!-- Values -->
+            <section class="about-section">
+                <h2>What We Believe</h2>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <i class="fa-solid fa-graduation-cap icons"></i>
+                        <h3>Education Opens Doors</h3>
+                        <p>Learning creates opportunities and builds confidence for the future.</p>
+                    </div>
+                    <div class="value-card">
+                        <i class="fa-solid fa-handshake icons"></i>
+                        <h3>Community Matters</h3>
+                        <p>No one succeeds alone. Support networks help people thrive.</p>
+                    </div>
+                    <div class="value-card">
+                        <i class="fa-solid fa-seedling icons"></i>
+                        <h3>Growth Takes Time</h3>
+                        <p>Every step forward matters, even when progress feels slow.</p>
                     </div>
                 </div>
-                <div class="about-col">
-                    <div class="about-card">
-                        <img src="./refugee.jpg" alt="refugees image" width="500">
-                    </div>
-                </div>
-            </div>
+            </section>
+            <!-- Why this Website -->
+            <section class="about-section">
+                <h2>Why This Website Exists</h2>
+                <p style="max-width:700px;margin:auto;">
+                    Many newcomers arrive with ambition and determination but struggle to find clear
+                    information about education, scholarships, and navigating life in the United States.
+                    This website was created to simplify that process and highlight pathways
+                    that others have successfully followed.
+                </p>
+            </section>
+            <!-- Inpirational Qoutes -->
+            <section class="quote container">
+                <p>
+                    “A journey of a thousand miles begins with a single step.”
+                </p>
+            </section>
+            <!-- Call to Action -->
+            <section class="about-cta">
+                <h2>Start Exploring Opportunities</h2>
+                <p>
+                    Whether you're searching for education pathways, scholarships,
+                    or inspiring stories from others who have succeeded,
+                    we invite you to explore and take the next step forward.
+                </p>
+                <a href="/index.html" class="btn">Explore Resources</a>
+            </section>
+
         </main>
+        <!-- Footer -->
         <footer class="footer">
             <div class="container">
                 <p>© 2026 A Life of Possibility. All rights reserved.</p>
             </div>
         </footer>
+
     </body>
 </html>
