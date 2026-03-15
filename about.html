@@ -14,6 +14,8 @@
 
         <!-- Font Awesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <script src="./Js/script.js" defer></script>
+        <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     </head>
     <body>
         <!-- Header -->
@@ -22,11 +24,26 @@
                 <a href="index.html" class="logo">
                     <img src="./assets/Logo.png" class="logo" alt="a life of possibility logo">
                 </a>
-                <nav>
+                <div class="menu-toggle" id="menu-toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <nav class="nav-links" id="nav-links">
                     <a href="index.html">Home</a>
                     <a href="about.html">About</a>
-                    <a href="#">Resources</a>
-                    <a href="#">Contact Us</a>
+                    <div class="dropdown">
+                        <a href="#" class="dropbtn">Resources <i class="fa-solid fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="education.html">Education <i class="fa-solid fa-chevron-left"></i></a>
+                            <a href="livingwell.html">Living Well <i class="fa-solid fa-chevron-left"></i></a>
+                            <a href="scholarships.html">Scholarships <i class="fa-solid fa-chevron-left"></i></a>
+                        </div>
+                    </div>
+                    <a href="contact.html">Contact Us</a>
+                    <!-- Google translate -->
+                    <!-- <div class="translate">
+                        <span> Language</span>
+                        <div id="google-translate-element"></div>
+                    </div> -->
                 </nav>
             </div>
         </header>
