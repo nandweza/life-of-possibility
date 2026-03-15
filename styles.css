@@ -19,7 +19,7 @@ html {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: var(--main-red);
+    color: var(--main-black);
 }
 
 h1 {
@@ -86,7 +86,7 @@ body {
 }
 
 p {
-    color: var(--main-black);
+    color: #444;
 }
 
 /* ------------------- Utility ---------------- */
@@ -105,10 +105,12 @@ p {
     text-decoration: none;
     border-radius: 5px;
     margin-top: 10px;
+    transition: all 0.25s ease;
 }
 
 .btn:hover {
-    background: var(--main-yellow);
+    background: #e24b50;
+    transform: translateY(-2px);
 }
 
 .icons {
@@ -132,7 +134,7 @@ p {
 
 .card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 10px 25px rgba(249, 168, 37, 0.4);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
 
 .card h3 {
@@ -165,19 +167,21 @@ p {
 }
 
 .quote p {
-    color: var(--main-yellow);
+    color: #555;
 }
 
 .quote p::before {
     content: open-quote;
     font-weight: bold;
     font-size: 1.5rem;
+    color: var(--main-yellow);
 }
 
 .quote p::after {
     content: close-quote;
     font-weight: bold;
     font-size: 1.5rem;
+    color: var(--main-yellow);
 }
 
 @media (max-width: 768px) {
@@ -240,11 +244,11 @@ p {
     color: #333;
     font-weight: 500;
     font-weight: 500;
-    transition: color 0.2s ease;
+    transition: all 0.2s ease;
 }
 
 .nav-links a:hover {
-    color: var(--main-yellow);
+    color: #e24b50;
 }
 
 /* Dropdown */
