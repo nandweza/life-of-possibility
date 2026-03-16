@@ -536,3 +536,14 @@ p {
         text-align: center;
     }
 }
+
+/* -------------------- Contact Us page --------------------- */
+
+/* Contact-intro section */
+.contact-intro, .contact-form, .contact-bottom {
+    padding: 100px;
+}
+
+.contact i {
+    font-size: 1rem;
+}
