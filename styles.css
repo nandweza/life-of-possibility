@@ -1,8 +1,8 @@
 /* Reset */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 :root {
@@ -541,9 +541,80 @@ p {
 
 /* Contact-intro section */
 .contact-intro, .contact-form, .contact-bottom {
-    padding: 100px;
+    padding: 100px 0;
 }
 
 .contact i {
-    font-size: 1rem;
+    font-size: 1.2rem;
+}
+
+.contact-intro p {
+    color: #555;
+}
+
+/* contact information */
+.contact-info {
+    display: flex;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .contact-info {
+        margin: 100px 0;
+    }
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .contact-info {
+        grid-row: 1;
+        margin: 0;
+    }
+    .form {
+        grid-row: 2;
+    }
+}
+
+/* contact form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form legend {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-control input, textarea {
+    padding: 10px;
+
+}
+
+.form-control .btn {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+@media (max-width: 768px) {
+    .form-control input, textarea {
+        padding: 8px;
+    }
+
+    .form-control .btn {
+        font-size: 1rem;
+    }
+}
+
+/* contact quick links */
+.contact-bottom {
+    text-align: center;
 }
