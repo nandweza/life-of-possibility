@@ -3,16 +3,16 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>A Life of Possibility</title>
+        <title>Education | A Life of Possibility</title>
         <link rel="stylesheet" href="styles.css" />
         <!-- Font Awesome CDN -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-        <script src="./Js/script.js" defer></script>
+        <script type="module" src="./Js/script.js" defer></script>
         <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     </head>
     <body>
 
-       <!-- Header -->
+        <!-- Header -->
         <header class="header">
             <div class="container nav">
                 <a href="index.html" class="logo">
@@ -41,8 +41,75 @@
                 </nav>
             </div>
         </header>
-        <main class="">
-            <h1>Education</h1>
+        <main class="education">
+            <section class="education-intro">
+                <div class="container">
+                    <div class="section-header">
+                        <h1>Education in the United States</h1>
+                        <p>
+                            Education is one of the most powerful ways to build a stable and successful future.<br>
+                            Explore your options, understand the system, and take your next step with confidence.
+                        </p>
+                        <a href="#education-path" class="btn">Explore Education Paths</a>
+                    </div>
+                </div>
+            </section>
+            <section class="education-journey section-background">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Start Your Education Journey</h2>
+                        <p>
+                            Follow these simple steps to begin building your future through education.
+                        </p>
+                    </div>
+                    <div class="grid">
+                        <div class="card">
+                            <h4><i class="fa-solid fa-book-open icons"></i>&nbsp;Learn</h4>
+                            <p>Understand how the U.S. education system works and what options are available.</p>
+                        </div>
+                        <div class="card">
+                            <h4><i class="fa-solid fa-compass icons"></i>&nbsp;Choose</h4>
+                            <p>
+                                Identify the path that fits your goals, whether it's high school, college, 
+                                or training program
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h4><i class="fa-solid fa-file-pen icons"></i>&nbsp;Apply</h4>
+                            <p>Prepare your documents, meet requirements, and apply with confidence.</p>
+                        </div>
+                        <div class="card">
+                            <h4><i class="fa-solid fa-trophy icons"></i>&nbsp;Succeed</h4>
+                            <p>Stay focused, use available resources, and build a strong foundation for your future.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="education-path" class="education-path">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Explore Education pathways</h2>
+                        <p>
+                            Explore education opportunities based on your state.
+                            Find schools, programs, and resources to help you build your
+                            future with confidence.
+                        </p>
+                    </div>
+                    <div class="container">
+                        <select name="" id="stateSelect">
+                            <option value="">Select Your State</option>
+                            <option value="idaho">Idaho</option>
+                            <option value="california">California</option>
+                            <option value="oregon">Oregon</option>
+                        </select>
+                    </div>
+                    <div id="educationResults" class="placeholder">
+                        <p>
+                            Select your state to see available education opportunities.
+                        </p>
+                    </div>
+                </div>
+            </section>
         </main>
         <footer class="footer">
             <div class="container">

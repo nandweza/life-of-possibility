@@ -141,6 +141,10 @@ p {
     margin-bottom: 10px;
 }
 
+section {
+    padding: 100px 0;
+}
+
 .section-header {
     max-width: 700px;
     margin: auto;
@@ -537,13 +541,16 @@ p {
     }
 }
 
+/* -------------------- Education page -----------------------*/
+
+/* education intro section */
+.education-journey {
+    text-align: center;
+}
+
 /* -------------------- Contact Us page --------------------- */
 
 /* Contact-intro section */
-.contact-intro, .contact-form, .contact-bottom {
-    padding: 100px 0;
-}
-
 .contact i {
     font-size: 1.2rem;
 }
