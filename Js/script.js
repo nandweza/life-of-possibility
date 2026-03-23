@@ -35,30 +35,72 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /**
- * renderState function updates the education page (The section about education path) 
+ * renderState function updates the education page (education path section) 
  * based on selected state
- * @param stateKey
+ * @param stateKey - the state to get education data for.
  */
 
 function renderState(stateKey) {
-	const data = educationData[stateKey];
+	const defaultData = educationData.default || {};
 
-	if (!data) return;
+	const stateData = educationData[stateKey] || {};
+
+	const data = {
+		name: stateData.name || stateKey.replace("_", " ").toUpperCase(),
+		ged: stateData.ged || defaultData.ged || {},
+		resources: stateData.resources || [],
+		communityColleges: stateData.communityColleges || [],
+		universities: stateData.universities || []
+	};
 
 	document.getElementById("educationResults").innerHTML = `
 		<h3>Education in ${data.name}</h3>
 		<div class="grid">
 			<div class="card">
-			<h4><i class="fa-solid fa-building-columns icons"></i>&nbsp;Community Colleges</h4>
-			<ul>
-				${data.communityColleges.map(c => `
-					<li><a href="${c.link}" target="_blank">${c.name}</a></li>
-				`).join("")}
-			</ul>
-		</div>
-		<div class="card">
-			<h4><i class="fa-solid fa-graduation-cap icons"></i>&nbsp;Universities</h4>
-		</div>
+				<i class="fa-solid fa-book icons"></i>
+				<h4>GED & Adult Education</h4>
+				<p>${data.ged.description || "Find GED programs and adult education opportunities."}</p>
+				<a href="${data.ged.link || "#"}" target="_blank">Visit GED Website</a>
+			</div>
+			<div class="card">
+				<i class="fa-solid fa-handshake icons"></i>
+				<h4>Local Resources</h4>
+				<ul>
+					${data.resources.length > 0
+						? data.resources.map(r => `
+							<li><a href="${r.link}" target="_blank">${r.name}</a></li>
+						`).join("")
+						: `<li><a href="${defaultData.collegeFinder?.link || "#"}" target="_blank">
+							${defaultData.collegeFinder?.name || "Find Education Resources"}</a></li>`
+					}
+				</ul>
+			</div>
+			<div class="card">
+				<i class="fa-solid fa-building-columns icons"></i>
+				<h4>Community Colleges</h4>
+				<ul>
+					${data.communityColleges.length > 0
+						? data.communityColleges.map(c => `
+							<li><a href="${c.link}" target="_blank">${c.name}</a></li>
+						`).join("")
+						: `<li><a href"=${defaultData.collegeFinder?.link || "#"}" target="_blank">
+							Search Community Colleges</a></li>`
+					}
+				</ul>
+			</div>
+			<div class="card">
+				<i class="fa-solid fa-graduation-cap icons"></i>
+				<h4>Universities</h4>
+				<ul>
+					${data.universities.length > 0
+						? data.universities.map(u => `
+						<li><a href="${u.link}" target="_blank">${u.name}</a></li>
+						`).join("")
+						: `<li><a href="${defaultData.collegeFinder?.link || "#"}" target="_blank">
+						Search Universities</a></li>`
+					}
+				</ul>
+			</div>
 		</div>
 	`;
 }

@@ -1,4 +1,19 @@
 export const educationData = {
+    default: {
+        ged: {
+            name: "GED Official Website",
+            link: "https://ged.com"
+        },
+        collegeFinder: {
+            name: "College Navigator",
+            link: "https://nces.ed.gov/collegenavigator/"
+        },
+        scholarships: {
+            name: "Federal Student Aid",
+            link: "https://studentaid.gov"
+        }
+    },
+
     idaho: {
         name: "Idaho",
 
@@ -47,6 +62,28 @@ export const educationData = {
 
     california: {
         name: "California",
+        communityColleges: [
+            { 
+                name: "Santa Monica College", 
+                link: "https://www.smc.edu" 
+            }
+        ],
+        universities: [
+            { 
+                name: "UCLA", link: 
+                "https://www.ucla.edu" 
+            },
+            { 
+                name: "UC Berkeley", 
+                link: "https://www.berkeley.edu" 
+            }
+        ],
+        resources: [
+            { 
+                name: "California Adult Education", 
+                link: "#" 
+            }
+        ]
     },
 
     oregon: {

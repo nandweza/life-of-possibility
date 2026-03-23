@@ -6,9 +6,12 @@
 }
 
 :root {
-    --main-white: #F8F9FA;
-    --main-red: #FF5E62;
-    --main-blue: #1800ad;
+    --main-white: #FFFFFF;
+    --main-gray: #F8F9FA;
+    --main-red: #F25F5C;
+    --main-hover: #E14C49;
+    --main-blue: #245C73;
+    --main-blight: #2F6F88;
     --main-yellow: #F9A825;
     --main-black: #333333;
 }
@@ -27,15 +30,15 @@ h1 {
 }
 
 h2 {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
 }
 
 h3 {
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 h4 {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
 }
 
 @media (max-width: 991px) {
@@ -48,11 +51,11 @@ h4 {
     }
 
     h3 {
-        font-size: 1.7rem;
+        font-size: 1.5rem;
     }
 
     h4 {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
 }
 
@@ -101,6 +104,7 @@ p {
     display: inline-block;
     background: var(--main-red);
     color: var(--main-white);
+    font-weight: 600;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
@@ -109,12 +113,12 @@ p {
 }
 
 .btn:hover {
-    background: #e24b50;
+    background: var(--main-hover);
     transform: translateY(-2px);
 }
 
 .icons {
-    color: var(--main-yellow);
+    color: var(--main-blue);
     font-size: 2rem;
 }
 
@@ -125,7 +129,7 @@ p {
 }
 
 .card {
-    background: white;
+    background: var(--main-white);
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
@@ -135,6 +139,7 @@ p {
 .card:hover {
     transform: translateY(-6px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--main-blue);
 }
 
 .card h3 {
@@ -156,22 +161,37 @@ section {
 }
 
 .section-background {
-    background: var(--main-white);
+    background: var(--main-gray);
+}
+
+.background-blue {
+    background: var(--main-blue);
+}
+
+.background-blight {
+    background: var(--main-blight);
+}
+
+.background-blue h1, .background-blue h2, .background-blight h2 {
+    color: var(--main-white);
+}
+
+.background-blue p, .background-blight p {
+    color: #E5E7EB;
 }
 
 /* Quote */
 .quote {
     max-width: 620px;
     margin: auto;
-    margin-top: 60px;
-    padding: 40px;
+    padding: 0 40px;
     font-style: italic;
     text-align: center;
     quotes: "\201C", "\201D"
 }
 
 .quote p {
-    color: #555;
+    color: var(--main-white);
 }
 
 .quote p::before {
@@ -245,7 +265,7 @@ section {
 
 .nav-links a {
     text-decoration: none;
-    color: #333;
+    color: #6B7280;
     font-weight: 500;
     font-weight: 500;
     transition: all 0.2s ease;
@@ -287,7 +307,7 @@ section {
 }
 
 .dropdown-content a:hover{
-    background: var(--main-white);
+    background: var(--main-gray);
 }
 
 /* Show dropdown */
@@ -343,11 +363,6 @@ section {
     .nav-links.active {
         display: flex;
     }
-
-    /* .dropdown-content {
-        position: static;
-        box-shadow: none;
-    } */
 }
 
 /* Footer */
@@ -367,6 +382,7 @@ section {
 /* Hero Section */
 .hero {
     padding: 100px 0;
+    background: var(--main-blue);
 }
 
 .hero-text {
@@ -375,16 +391,18 @@ section {
 
 .hero-text h1 {
     margin-bottom: 15px;
+    color: var(--main-white);
 }
 
 .hero-intro {
     font-size: 1.05rem;
     margin-bottom: 15px;
+    color: #E5E7EB
 }
 
 .hero-support {
     font-size: 0.95rem;
-    color: #555;
+    color: #E5E7EB;
     margin-bottom: 20px;
 }
 
@@ -495,7 +513,7 @@ section {
     grid-template-columns: 1fr 1fr;
     gap: 40px;
     align-items: center;
-    margin-top: 40px;
+    /* margin-top: 40px; */
 }
 
 .about-intro img {
@@ -506,9 +524,9 @@ section {
 
 /* Page sections spacing */
 .about-section {
-    margin-top: 60px;
+    /* margin-top: 60px; */
     text-align: center;
-    padding: 40px 0;
+    /* padding: 40px 0; */
 }
 
 .about-section p {
@@ -523,7 +541,7 @@ section {
 
 /* Call to Action */
 .about-cta {
-    margin-top: 60px;
+    /* margin-top: 60px; */
     text-align: center;
     padding-bottom: 40px;
 }
@@ -546,6 +564,69 @@ section {
 /* education intro section */
 .education-journey {
     text-align: center;
+}
+
+.education-journey i {
+    font-size: 1.4rem;
+}
+
+.education-path h4 {
+    font-size: 1.5rem;
+    
+}
+
+#stateSelect {
+    width: 100%;
+    max-width: 300px;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    margin: 30px auto;
+    display: block;
+}
+
+#educationResults h3 {
+    margin-bottom: 30px;
+}
+
+#educationResults h4 {
+    padding-bottom   : 10px;
+}
+
+#educationResults i {
+    font-size: 1.5rem;
+}
+
+#educationResults ul {
+    padding-left: 30px;
+}
+
+@media (max-width: 600px) {
+    #educationResults ul {
+        padding-left: 60px;
+    }
+}
+
+#educationResults ul li {
+    text-align: left;
+    list-style-type: circle;
+}
+
+#educationResults a {
+    color: var(--main-red);
+}
+
+#educationResults a:hover {
+    color: var(--main-hover);
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.placeholder {
+    text-align: center;
+    margin-top: 40px;
+    color: #555;
 }
 
 /* -------------------- Contact Us page --------------------- */
