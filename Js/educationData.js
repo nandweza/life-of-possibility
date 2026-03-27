@@ -43,15 +43,10 @@ export const educationData = {
             }
         ],
 
-        ged: {
-            description: "Earn your GED and open doors to education and better jobs.",
-            link: "https://ged.com"
-        },
-
         resources: [
             {
                 name: "Idaho Adult Education",
-                link: "#"
+                link: "https://cwi.edu/academics/adult-education-ged-prep"
             },
             {
                 name: "Workforce Training Programs",

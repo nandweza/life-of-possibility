@@ -57,12 +57,6 @@ function renderState(stateKey) {
 		<h3>Education in ${data.name}</h3>
 		<div class="grid">
 			<div class="card">
-				<i class="fa-solid fa-book icons"></i>
-				<h4>GED & Adult Education</h4>
-				<p>${data.ged.description || "Find GED programs and adult education opportunities."}</p>
-				<a href="${data.ged.link || "#"}" target="_blank">Visit GED Website</a>
-			</div>
-			<div class="card">
 				<i class="fa-solid fa-handshake icons"></i>
 				<h4>Local Resources</h4>
 				<ul>

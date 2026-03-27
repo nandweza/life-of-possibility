@@ -629,6 +629,24 @@ section {
     color: #555;
 }
 
+.state-education {
+    padding-top: 50px;
+}
+
+.education-action-btn {
+    text-align: center;
+}
+
+.white-hover:hover {
+    background: none;
+    border: var(--main-gray) solid 1px;
+}
+
+.black-hover {
+    background: none;
+    border: var(--main-gray) solid 1px;
+}
+
 /* -------------------- Contact Us page --------------------- */
 
 /* Contact-intro section */
