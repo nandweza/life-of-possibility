@@ -566,7 +566,7 @@ section {
     text-align: center;
 }
 
-.education-journey i {
+.education-journey i, .scholarship i {
     font-size: 1.4rem;
 }
 
@@ -637,6 +637,10 @@ section {
     text-align: center;
 }
 
+.education-action-btn .btn:hover {
+    transform: translateY(0px);
+}
+
 .white-hover:hover {
     background: none;
     border: var(--main-gray) solid 1px;
@@ -645,6 +649,15 @@ section {
 .black-hover {
     background: none;
     border: var(--main-gray) solid 1px;
+}
+
+/* -------------------- Scholarship page -------------------- */
+.scholarship-type, .scholarships {
+    text-align: center;
+}
+
+.scholarships a {
+    color: var(--main-red);
 }
 
 /* -------------------- Contact Us page --------------------- */
