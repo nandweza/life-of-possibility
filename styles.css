@@ -8,7 +8,8 @@
 :root {
     --main-white: #FFFFFF;
     --main-gray: #F8F9FA;
-    --main-red: #F25F5C;
+    /* --main-red: #F25F5C; */
+    --main-red: #C92A2A;
     --main-hover: #E14C49;
     --main-blue: #245C73;
     --main-blight: #2F6F88;
