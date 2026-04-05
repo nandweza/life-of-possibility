@@ -9,8 +9,9 @@
     --main-white: #FFFFFF;
     --main-gray: #F8F9FA;
     /* --main-red: #F25F5C; */
-    --main-red: #C92A2A;
-    --main-hover: #E14C49;
+    --main-red: #C92A2A;  /* contrast checker passed on this color*/
+    --main-hover: #A52121; /*contrast fix */
+    /* --main-hover: #E14C49; */
     --main-blue: #245C73;
     --main-blight: #2F6F88;
     --main-yellow: #F9A825;
@@ -651,6 +652,8 @@ section {
     background: none;
     border: var(--main-gray) solid 1px;
 }
+
+/* -------------------- Living well page --------------------- */
 
 /* -------------------- Scholarship page -------------------- */
 .scholarship-type, .scholarships {
