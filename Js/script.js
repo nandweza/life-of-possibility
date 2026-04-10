@@ -1,10 +1,10 @@
 import { educationData } from "./educationData.js";
 
-function googleTranslateElementInit() {
+window.googleTranslateElementInit = function() {
 	new google.translate.TranslateElement(
 		{
 			pageLanguage: 'en',
-			includedLanguages: 'es,fr,ar,am,sw,pt',
+			includedLanguages: 'en,es,fr,ar,am,sw,pt,rw,rn,so',
 			layout: google.translate.TranslateElement.InlineLayout.SIMPLE
 		},
 		'google_translate_element'
