@@ -520,10 +520,10 @@ section {
 
 /* About Intro */
 .about-intro {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: center;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr; */
+    /* gap: 40px;
+    align-items: center; */
     /* margin-top: 40px; */
 }
 
@@ -531,6 +531,8 @@ section {
     width: 100%;
     max-width: 500px;
     border-radius: 10px;
+    object-fit: cover;
+    filter: brightness(100%);
 }
 
 /* Page sections spacing */
@@ -713,16 +715,20 @@ section {
     justify-content: center;
 }
 
-/* .family-grid ul {
-    list-style-type: square;
-    margin: 0 auto;
+.community-support {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* gap: 40px; */
 }
 
-.family-grid ul li::marker {
-    color: var(--main-blue);
-    font-weight: bold;
-    font-size: 1.2rem;
-} */
+@media (max-width: 768px) {
+    .community-support {
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+}
+
 /* -------------------- Scholarship page -------------------- */
 .scholarship-type, .scholarships {
     text-align: center;
