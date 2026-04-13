@@ -1,5 +1,6 @@
 import { educationData } from "./educationData.js";
 
+// google translate
 window.googleTranslateElementInit = function() {
 	new google.translate.TranslateElement(
 		{
@@ -11,6 +12,7 @@ window.googleTranslateElementInit = function() {
 	);
 }
 
+// interactive navigation header
 const menuToggle = document.getElementById("menu-toggle");
 const navLinks = document.getElementById("nav-links");
 
@@ -100,6 +102,34 @@ function renderState(stateKey) {
 }
 
 /* select event listener */
-document.getElementById("stateSelect").addEventListener("change", function () {
+document.getElementById("stateSelect")?.addEventListener("change", function () {
 	renderState(this.value);
 });
+
+/**
+ * contactUs() - 
+ * 
+ */
+// document.getElementById("btn")?.addEventListener("click", function () {
+// 	alert("Thank you");
+// });
+
+const form = document.querySelector('#contact-form');
+
+if (form) {
+	form.addEventListener('submit', (e) => {
+		e.preventDefault();
+		
+		const formData = new FormData(form);
+		
+		// convert to object values
+		const values = Object.fromEntries(formData.entries());
+		
+		console.log(values);
+		alert("Thank you for contacting us....");
+	});
+
+	form.removeEventListener();
+} else {
+	console.log("form element not found....");
+}
