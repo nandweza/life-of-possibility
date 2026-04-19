@@ -36,11 +36,11 @@ h2 {
 }
 
 h3 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
 }
 
 h4 {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
 }
 
 @media (max-width: 991px) {
@@ -53,7 +53,7 @@ h4 {
     }
 
     h3 {
-        font-size: 1.5rem;
+        font-size: 1.35rem;
     }
 
     h4 {
@@ -71,7 +71,7 @@ h4 {
     }
 
     h3 {
-        font-size: 1.25rem;
+        font-size: 1.2rem;
     }
 
     h4 {
@@ -88,7 +88,7 @@ body {
     line-height: 1.6;
     max-width: 100%;
     overflow-x: hidden;
-    padding-top: 120px;
+    padding-top: 80px;
 }
 
 p {
@@ -445,8 +445,8 @@ section {
         margin: auto;
     }
 
-    .hero-image{
-        margin-top: 20px;
+    .hero-img{
+        order: -1;
     }
 
 }
@@ -467,12 +467,6 @@ section {
 
 .start-link:hover {
     text-decoration: underline;
-}
-
-/* Resources Section */
-.features {
-    padding: 60px 0;
-    text-align: center;
 }
 
 /* stories section */
@@ -687,6 +681,10 @@ section {
     font-size: 1.2rem;
 }
 
+.adjusted-card p {
+    color: var(--main-blue);
+}
+
 /* Building a stable life section */
 
 
@@ -707,9 +705,7 @@ section {
 }
 
 .family-grid .icons, .family-grid h3 {
-    /* text-align: center; */
     margin: 0 auto;
-    font-size: 1.8rem;
 }
 
 .family-grid .card .list-body {
@@ -721,7 +717,6 @@ section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* gap: 40px; */
 }
 
 @media (max-width: 768px) {
@@ -748,7 +743,11 @@ section {
 }
 
 .contact-intro p {
-    color: #555;
+    color: #eee;
+}
+
+.contact-intro i {
+    color: var(--main-yellow);
 }
 
 /* contact information */

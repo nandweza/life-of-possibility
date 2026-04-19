@@ -57,7 +57,7 @@ function renderState(stateKey) {
 		<div class="grid">
 			<div class="card">
 				<i class="fa-solid fa-handshake icons"></i>
-				<h4>Local Resources</h4>
+				<h3>Local Resources</h3>
 				<ul>
 					${data.resources.length > 0
 						? data.resources.map(r => `
@@ -70,7 +70,7 @@ function renderState(stateKey) {
 			</div>
 			<div class="card">
 				<i class="fa-solid fa-building-columns icons"></i>
-				<h4>Community Colleges</h4>
+				<h3>Community Colleges</h3>
 				<ul>
 					${data.communityColleges.length > 0
 						? data.communityColleges.map(c => `
@@ -83,7 +83,7 @@ function renderState(stateKey) {
 			</div>
 			<div class="card">
 				<i class="fa-solid fa-graduation-cap icons"></i>
-				<h4>Universities</h4>
+				<h3>Universities</h3>
 				<ul>
 					${data.universities.length > 0
 						? data.universities.map(u => `
