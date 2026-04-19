@@ -88,6 +88,7 @@ body {
     line-height: 1.6;
     max-width: 100%;
     overflow-x: hidden;
+    padding-top: 120px;
 }
 
 p {
@@ -236,11 +237,12 @@ section {
     background: var(--main-white);
     border-bottom: 1px solid #eee;
     width: 100%;
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
     transition: all 0.3s ease;
+    will-change: transform, background-color;
 }
 
 .header.scrolled {

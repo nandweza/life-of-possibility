@@ -15,25 +15,22 @@ window.googleTranslateElementInit = function() {
 // interactive navigation header
 const menuToggle = document.getElementById("menu-toggle");
 const navLinks = document.getElementById("nav-links");
+const header = document.querySelector(".header");
 
 menuToggle.addEventListener("click", () => {
 	navLinks.classList.toggle("active");
 });
 
-let timeout;
-const header = document.querySelector(".header");
-
-document.addEventListener("DOMContentLoaded", () => {
-	window.addEventListener("scroll", () => {
-		clearTimeout(timeout);
-		timeout = setTimeout(() => {
-			if(window.scrollY > 80) {
-				header.classList.add("scrolled");
-			} else {
-				header.classList.remove("scrolled");
-			}
-		}, 20); // adjust delay; fixed header shaky
-	});
+window.addEventListener("scroll", () => {
+	if(window.scrollY > 80) {
+		if (!header.classList.contains("scrolled")) {
+			header.classList.add("scrolled");
+		}
+	} else {
+		if (header.classList.contains("scrolled")) {
+			header.classList.remove("scrolled");
+		}
+	}
 });
 
 /**
@@ -129,7 +126,6 @@ if (form) {
 		alert("Thank you for contacting us....");
 	});
 
-	form.removeEventListener();
 } else {
 	console.log("form element not found....");
 }
