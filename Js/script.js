@@ -111,7 +111,7 @@ document.getElementById("stateSelect")?.addEventListener("change", function () {
 // 	alert("Thank you");
 // });
 
-const form = document.querySelector('#contact-form');
+const form = document.getElementById('contact-form');
 
 if (form) {
 	form.addEventListener('submit', (e) => {
@@ -124,6 +124,8 @@ if (form) {
 		
 		console.log(values);
 		alert("Thank you for contacting us....");
+
+		form.reset();
 	});
 
 } else {
