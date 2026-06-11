@@ -1,4 +1,26 @@
 import { educationData } from "./educationData.js";
+import { chooseLanguage } from "./index.js";
+
+
+
+
+function languageSlider(obj, elementId) {
+	const values = Object.values(obj);
+	let index = 0;
+
+	const element = document.getElementById(elementId);
+
+	function showSlide() {
+		element.textContent = values[index];
+		index = (index + 1) % values.length;
+	}
+
+	showSlide();
+	setInterval(showSlide, 5000)
+}
+
+languageSlider(chooseLanguage, "lang-choice")
+
 
 // google translate
 window.googleTranslateElementInit = function() {

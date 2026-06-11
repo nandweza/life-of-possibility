@@ -232,6 +232,21 @@ section {
     }
 }
 
+/* Landing page: language section */
+.lang-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.lang-header {
+    margin-bottom: 50px;
+}
+
+.lang-header h1, .lang-header p {
+    text-align: center;
+
+}
+
 /* Header */
 .header {
     background: var(--main-white);
