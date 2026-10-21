@@ -552,6 +552,187 @@ h1 span {
   text-underline-offset: 3px;
 }
 
+.education-main {
+  flex: 1;
+  padding: 54px 0 46px;
+}
+
+.education-back-link {
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.education-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.resource-directory {
+  margin-top: 34px;
+  border-top: 1px solid var(--line);
+}
+
+.directory-heading {
+  padding: 22px 0 18px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.directory-heading h2 {
+  margin-bottom: 4px;
+  font-family: "Manrope", sans-serif;
+  font-size: 20px;
+}
+
+.directory-heading p {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.directory-heading .result-count {
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.directory-filters {
+  display: grid;
+  grid-template-columns: minmax(220px, 1.5fr) repeat(2, minmax(150px, 0.8fr));
+  gap: 12px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  background: #eef1ec;
+}
+
+.directory-filters label {
+  min-width: 0;
+  display: grid;
+  gap: 7px;
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.directory-filters input,
+.directory-filters select {
+  width: 100%;
+  min-height: 44px;
+  padding: 0 12px;
+  border: 1px solid #c8d0c9;
+  border-radius: 3px;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+  font-size: 13px;
+}
+
+.resource-results {
+  margin: 16px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  list-style: none;
+}
+
+.resource-result {
+  min-width: 0;
+  padding: 18px 19px 17px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  background: rgb(255 255 255 / 60%);
+}
+
+.resource-result-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.resource-result-meta span:first-child {
+  color: var(--green);
+  font-weight: 700;
+}
+
+.resource-result h3 {
+  margin: 12px 0 6px;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+}
+
+.resource-result h3 a {
+  color: var(--ink);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.resource-result h3 a:hover {
+  color: var(--green);
+}
+
+.external-indicator {
+  padding-left: 5px;
+  color: var(--green);
+  font-size: 12px;
+}
+
+.resource-result p {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.directory-note {
+  margin: 17px 0 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+.empty-results {
+  margin-top: 16px;
+  padding: 28px 20px;
+  border: 1px dashed #b8c4ba;
+  text-align: center;
+}
+
+.empty-results h3 {
+  margin-bottom: 7px;
+  font-family: "Manrope", sans-serif;
+  font-size: 17px;
+}
+
+.empty-results p {
+  margin-bottom: 12px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.empty-results button {
+  min-height: 40px;
+  padding: 0 13px;
+  border: 1px solid var(--green);
+  border-radius: 3px;
+  background: transparent;
+  color: var(--green);
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+}
+
 @keyframes rise-in {
   from {
     opacity: 0;
@@ -642,6 +823,13 @@ h1 span {
     gap: 8px;
   }
 
+  .education-header-actions {
+    width: 100%;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
   .guide-language-control {
     width: 100%;
     justify-content: space-between;
@@ -652,6 +840,10 @@ h1 span {
   }
 
   .guide-main {
+    padding: 38px 0 28px;
+  }
+
+  .education-main {
     padding: 38px 0 28px;
   }
 
@@ -703,6 +895,17 @@ h1 span {
   }
 
   .pathway-footer {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .directory-filters,
+  .resource-results {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .directory-heading {
     align-items: flex-start;
     flex-direction: column;
     gap: 8px;

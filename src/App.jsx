@@ -69,6 +69,16 @@ export default function App() {
             />
           }
         />
+        <Route
+          path="/education"
+          element={
+            <EducationPage
+              languages={languages}
+              selectedLanguage={selectedLanguage}
+              onLanguageSelect={handleLanguageSelect}
+            />
+          }
+        />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </HashRouter>

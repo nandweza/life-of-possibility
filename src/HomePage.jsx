@@ -8,12 +8,12 @@ const pathways = {
     steps: [
       {
         text: "Explore education options and adult learning.",
-        href: "./education.html",
+        route: "/education",
         label: "View education resources",
       },
       {
         text: "Look for schools and learning resources in your state.",
-        href: "./education.html",
+        route: "/education",
         label: "Browse state resources",
       },
       {
@@ -185,6 +185,12 @@ export default function HomePage({
                     />
                     <span>{step.text}</span>
                   </label>
+                  {step.route && (
+                    <Link to={step.route} className="step-resource-link">
+                      {step.label}
+                      <span aria-hidden="true">&#8599;</span>
+                    </Link>
+                  )}
                   {step.href && (
                     <a href={step.href} className="step-resource-link">
                       {step.label}
