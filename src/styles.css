@@ -309,6 +309,249 @@ h1 span {
   font-weight: 800;
 }
 
+.guide-page {
+  width: min(1240px, 100%);
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0 5.5%;
+  display: flex;
+  flex-direction: column;
+}
+
+.guide-header {
+  min-height: 86px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  border-bottom: 1px solid var(--line);
+}
+
+.guide-language-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.guide-language-control select {
+  max-width: 220px;
+  min-height: 40px;
+  padding: 0 32px 0 10px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+}
+
+.guide-main {
+  flex: 1;
+  padding: 54px 0 42px;
+}
+
+.guide-intro {
+  max-width: 680px;
+  margin-bottom: 34px;
+}
+
+.guide-intro h1 {
+  margin-bottom: 12px;
+  font-size: clamp(34px, 4vw, 48px);
+}
+
+.guide-intro > p:last-child,
+.pathway-detail-header > div > p:last-child {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.pathway-section {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.72fr) minmax(0, 1.6fr);
+  align-items: start;
+  gap: 22px;
+}
+
+.pathway-choices {
+  display: grid;
+  gap: 8px;
+}
+
+.pathway-choice {
+  min-height: 104px;
+  padding: 14px 16px;
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 4px 10px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  text-align: left;
+}
+
+.pathway-choice:hover,
+.pathway-choice.is-active {
+  border-color: var(--green);
+  background: #eaf1ed;
+}
+
+.pathway-number {
+  grid-row: span 2;
+  color: #c55e43;
+  font-family: "Manrope", sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.pathway-choice-title {
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.pathway-choice-description {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.pathway-detail {
+  min-width: 0;
+  padding: 25px 27px 16px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  background: rgb(255 255 255 / 58%);
+}
+
+.pathway-detail-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 22px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--line);
+}
+
+.pathway-detail-header .eyebrow {
+  margin-bottom: 8px;
+}
+
+.pathway-detail-header h2 {
+  margin-bottom: 6px;
+  font-family: "Manrope", sans-serif;
+  font-size: 22px;
+}
+
+.progress-count {
+  flex: 0 0 auto;
+  margin: 4px 0 0;
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.step-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.guide-step {
+  min-height: 75px;
+  padding: 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-bottom: 1px solid var(--line);
+}
+
+.step-check {
+  min-width: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.step-check input {
+  flex: 0 0 auto;
+  width: 18px;
+  height: 18px;
+  margin: 1px 0 0;
+  accent-color: var(--green);
+}
+
+.step-resource-link {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.pathway-footer {
+  padding-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.pathway-footer p,
+.clear-progress {
+  margin: 0;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.clear-progress {
+  padding: 6px 0;
+  border: 0;
+  background: transparent;
+  color: var(--green);
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.language-notice {
+  margin: 21px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.guide-footer {
+  min-height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.guide-footer a {
+  color: var(--green);
+  font-weight: 600;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
 @keyframes rise-in {
   from {
     opacity: 0;
@@ -385,6 +628,84 @@ h1 span {
   .site-footer {
     min-height: 60px;
     font-size: 10px;
+  }
+
+  .guide-page {
+    padding: 0 20px;
+  }
+
+  .guide-header {
+    min-height: 72px;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .guide-language-control {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .guide-language-control select {
+    max-width: 190px;
+  }
+
+  .guide-main {
+    padding: 38px 0 28px;
+  }
+
+  .guide-intro h1 {
+    font-size: 36px;
+  }
+
+  .pathway-section {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .pathway-choices {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .pathway-choice {
+    min-height: 116px;
+    padding: 11px 9px;
+    grid-template-columns: 1fr;
+    align-content: start;
+  }
+
+  .pathway-number {
+    grid-row: auto;
+  }
+
+  .pathway-choice-title {
+    font-size: 12px;
+  }
+
+  .pathway-choice-description {
+    font-size: 10px;
+  }
+
+  .pathway-detail {
+    padding: 19px 16px 14px;
+  }
+
+  .pathway-detail-header {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .guide-step {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 9px;
+  }
+
+  .pathway-footer {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
   }
 }
 

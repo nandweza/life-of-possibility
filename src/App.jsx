@@ -1,5 +1,7 @@
 import { useState } from "react";
+import { HashRouter, Link, Navigate, Route, Routes } from "react-router-dom";
 import studentReading from "../assets/lady-studying.jpg";
+import HomePage from "./HomePage.jsx";
 
 const languages = [
   { code: "en", label: "English", native: "English" },
@@ -39,9 +41,6 @@ function saveLanguage(languageCode) {
 
 export default function App() {
   const [selectedLanguage, setSelectedLanguage] = useState(getSavedLanguage);
-  const selectedLanguageName = languages.find(
-    ({ code }) => code === selectedLanguage,
-  )?.label;
 
   function handleLanguageSelect(languageCode) {
     setSelectedLanguage(languageCode);
@@ -49,9 +48,42 @@ export default function App() {
   }
 
   return (
+    <HashRouter>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <LanguageLanding
+              selectedLanguage={selectedLanguage}
+              onLanguageSelect={handleLanguageSelect}
+            />
+          }
+        />
+        <Route
+          path="/start"
+          element={
+            <HomePage
+              languages={languages}
+              selectedLanguage={selectedLanguage}
+              onLanguageSelect={handleLanguageSelect}
+            />
+          }
+        />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </HashRouter>
+  );
+}
+
+function LanguageLanding({ selectedLanguage, onLanguageSelect }) {
+  const selectedLanguageName = languages.find(
+    ({ code }) => code === selectedLanguage,
+  )?.label;
+
+  return (
     <div className="welcome-page">
       <header className="site-header">
-        <a className="wordmark" href="./" aria-label="How to America home">
+        <a className="wordmark" href="#/" aria-label="How to America home">
           <span>HOW TO</span> AMERICA
         </a>
         <span className="header-note">A guide to your next step</span>
@@ -90,7 +122,7 @@ export default function App() {
                   type="button"
                   aria-pressed={selectedLanguage === code}
                   key={code}
-                  onClick={() => handleLanguageSelect(code)}
+                  onClick={() => onLanguageSelect(code)}
                 >
                   <span>{native}</span>
                   {native !== label && <span className="language-label">{label}</span>}
@@ -104,12 +136,12 @@ export default function App() {
                 : `${selectedLanguageName} is saved as your preference. Site pages are currently in English.`}
             </p>
 
-            <a className="continue-link" href="./home.html">
+            <Link className="continue-link" to="/start">
               {selectedLanguage === "en"
-                ? "Explore the guide"
+                ? "Start here"
                 : "Continue in English for now"}
               <span aria-hidden="true">&#8594;</span>
-            </a>
+            </Link>
           </div>
         </section>
 
