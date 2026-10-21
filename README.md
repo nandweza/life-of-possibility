@@ -1,24 +1,33 @@
-# A Life of Possibility
+# How to America
 
-*A Life of Possibility is a modern, responsive website built using HTML, CSS, and JavaScript.
-The project focuses on clean design, accessibility, and an inspiring user experience.*
+A practical, interactive guide to finding your next step in the United States. The site is being migrated from standalone HTML pages to React, with existing pages preserved during the transition.
 
-### Project Overview
+## Run locally
 
-##### This website is designed to:
+Requirements: Node.js 20.19 or newer and npm.
 
-+ Inspire personal growth and possibility
+```sh
+npm ci
+npm run dev
+```
 
-+ Present content in a clean and engaging layout
+Vite prints the local URL. The app uses the `/life-of-possibility/` base path to match its GitHub Pages project site.
 
-+ Be fully responsive across devices
+## Build
 
-+ Use modern frontend development practices
+```sh
+npm run build
+npm run preview
+```
 
-### Tech Stack
+The production build is written to `dist/`. The build also copies the existing standalone pages and their assets into `dist/` so they remain available while they are migrated.
 
-+ **HTML5** – Semantic structure
+## GitHub Pages deployment
 
-+ **CSS3** – Styling, layout, responsiveness
+The workflow in `.github/workflows/deploy.yml` builds the site and deploys `dist/` to GitHub Pages when changes are pushed to `main`.
 
-+ **JavaScript (Vanilla JS)** – Interactivity and dynamic behavior
+Before the first workflow deployment, open the repository's **Settings > Pages** and set **Build and deployment > Source** to **GitHub Actions**. This is required because the React entry page must be built before GitHub Pages serves it.
+
+## Current language support
+
+The landing page lets visitors choose and save a preferred language. Until reviewed translations are added, site content remains in English and the landing page says so; selecting another language does not claim to translate the existing pages.
