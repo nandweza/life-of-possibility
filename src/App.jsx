@@ -1,7 +1,12 @@
 import { useState } from "react";
 import { HashRouter, Link, Navigate, Route, Routes } from "react-router-dom";
 import studentReading from "../assets/lady-studying.jpg";
+import AboutPage from "./AboutPage.jsx";
+import ContactPage from "./ContactPage.jsx";
+import EducationPage from "./EducationPage.jsx";
 import HomePage from "./HomePage.jsx";
+import LivingWellPage from "./LivingWellPage.jsx";
+import ScholarshipsPage from "./ScholarshipsPage.jsx";
 
 const languages = [
   { code: "en", label: "English", native: "English" },
@@ -73,6 +78,46 @@ export default function App() {
           path="/education"
           element={
             <EducationPage
+              languages={languages}
+              selectedLanguage={selectedLanguage}
+              onLanguageSelect={handleLanguageSelect}
+            />
+          }
+        />
+        <Route
+          path="/about"
+          element={
+            <AboutPage
+              languages={languages}
+              selectedLanguage={selectedLanguage}
+              onLanguageSelect={handleLanguageSelect}
+            />
+          }
+        />
+        <Route
+          path="/contact"
+          element={
+            <ContactPage
+              languages={languages}
+              selectedLanguage={selectedLanguage}
+              onLanguageSelect={handleLanguageSelect}
+            />
+          }
+        />
+        <Route
+          path="/living-well"
+          element={
+            <LivingWellPage
+              languages={languages}
+              selectedLanguage={selectedLanguage}
+              onLanguageSelect={handleLanguageSelect}
+            />
+          }
+        />
+        <Route
+          path="/scholarships"
+          element={
+            <ScholarshipsPage
               languages={languages}
               selectedLanguage={selectedLanguage}
               onLanguageSelect={handleLanguageSelect}

@@ -20,7 +20,9 @@ npm run build
 npm run preview
 ```
 
-The production build is written to `dist/`. The build also copies the existing standalone pages and their assets into `dist/` so they remain available while they are migrated.
+The production build is written to `dist/`. The React app includes the start guide, education directory, living-well guidance, scholarships, about, and contact pages. Existing page URLs (`home.html`, `education.html`, and the other legacy page links) redirect to their React routes.
+
+The language preference is available throughout the app. Page content is currently in English; selecting another language saves the preference but does not translate page content.
 
 ## GitHub Pages deployment
 

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import GuideLayout from "./GuideLayout.jsx";
 
 const pathways = {
   education: {
@@ -18,7 +19,7 @@ const pathways = {
       },
       {
         text: "Check funding opportunities for your next step.",
-        href: "./scholarships.html",
+        route: "/scholarships",
         label: "Explore scholarships",
       },
     ],
@@ -32,7 +33,7 @@ const pathways = {
       },
       {
         text: "Review the current living-well information and its resources.",
-        href: "./livingwell.html",
+        route: "/living-well",
         label: "Explore living-well resources",
       },
       {
@@ -49,7 +50,7 @@ const pathways = {
       },
       {
         text: "Review scholarship information and eligibility details.",
-        href: "./scholarships.html",
+        route: "/scholarships",
         label: "View scholarship resources",
       },
       {
@@ -113,26 +114,11 @@ export default function HomePage({
   }
 
   return (
-    <div className="guide-page">
-      <header className="guide-header">
-        <Link className="wordmark" to="/" aria-label="How to America language selection">
-          <span>HOW TO</span> AMERICA
-        </Link>
-        <label className="guide-language-control">
-          <span>Preferred language</span>
-          <select
-            value={selectedLanguage}
-            onChange={(event) => onLanguageSelect(event.target.value)}
-          >
-            {languages.map(({ code, label, native }) => (
-              <option value={code} key={code}>
-                {native === label ? label : `${label} (${native})`}
-              </option>
-            ))}
-          </select>
-        </label>
-      </header>
-
+    <GuideLayout
+      languages={languages}
+      selectedLanguage={selectedLanguage}
+      onLanguageSelect={onLanguageSelect}
+    >
       <main className="guide-main">
         <section className="guide-intro" aria-labelledby="guide-title">
           <p className="eyebrow">START HERE</p>
@@ -210,17 +196,8 @@ export default function HomePage({
           </div>
         </section>
 
-        <p className="language-notice" role="status">
-          {selectedLanguage === "en"
-            ? "This guide is currently available in English."
-            : "Your language preference is saved. This guide is currently available in English."}
-        </p>
       </main>
 
-      <footer className="guide-footer">
-        <span>Useful information. One step at a time.</span>
-        <Link to="/">Change language</Link>
-      </footer>
-    </div>
+    </GuideLayout>
   );
 }

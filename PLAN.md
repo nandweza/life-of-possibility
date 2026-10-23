@@ -12,6 +12,7 @@ The site should make information easy to find, understandable across languages, 
 - Let visitors choose a language at entry and keep that language throughout the entire site, including on later visits.
 - Organize guidance into clear topics and step-by-step pathways for settling into life in the United States.
 - Help visitors actively find and track relevant next steps through useful, optional interactive tools.
+- Help newcomers discover relevant, current events and services in their state from trusted community and public sources.
 - Preserve and improve useful existing content, including education, scholarships, living well, and contact information.
 - Make content accessible, mobile-friendly, easy to maintain, and transparent about sources and limits.
 
@@ -28,6 +29,9 @@ The site should make information easy to find, understandable across languages, 
 
 - Provide guided pathways for common goals, such as finding housing, learning English, getting healthcare, pursuing education, or looking for work. Let visitors choose what applies and show relevant steps and trusted resources.
 - Make resource directories searchable and filterable by topic and, where supported, state or location. Keep source links and coverage limitations visible.
+- Let visitors enter any career or job title and tailor a practical roadmap using their current education, relevant experience, target state, timeline, and main priority. Include occupation-specific research links and adjustable, checkable next steps for role research, training, licensing, funding, and experience. Clearly distinguish this personalized planning aid from verified occupation-specific requirements.
+- Provide an event finder for opportunities such as legal-aid clinics, job fairs, English classes, health services, education workshops, and community events. Let visitors filter by state and useful details such as topic, date, format, cost, and language where available.
+- Aggregate event listings from trusted public feeds or APIs and participating organizations; do not indiscriminately scrape websites or imply that every listing is endorsed. Show the source, event date, last-checked time, location or online format, and any stated eligibility requirements. Expire past events and provide a way to report inaccurate listings.
 - Offer optional checklists with progress saved on the visitor's device. Do not require an account; explain how to clear saved progress.
 - Use accessible expandable FAQs and glossaries for unfamiliar terms, while keeping essential information visible and readable without interaction.
 - Provide clear feedback for actions, empty search results, errors, and incomplete translations. Support keyboard and screen-reader interaction.
@@ -39,9 +43,10 @@ Keep the first release focused and build from the existing site:
 
 - **Home / Start here:** choose a goal or topic and find a short, approachable first step.
 - **Getting settled:** essential first steps and links to authoritative services.
-- **Education:** explain education pathways and retain the existing state-based resource directory.
+- **Education:** explain education pathways, retain the existing state-based resource directory, and help visitors explore a starting roadmap for a career they enter.
 - **Work and money:** employment basics, workplace resources, banking, budgeting, and taxes, with appropriate referrals to official sources.
-- **Health and daily life:** healthcare access, housing, transportation, and community resources as content is researched and reviewed.
+- **Health and daily life:** healthcare access, housing, transportation, everyday communication and social customs, and community resources as content is researched and reviewed. Present cultural examples as possibilities, not universal expectations, and respect individual differences and boundaries.
+- **Events and opportunities:** a state-based finder for current community events, services, workshops, and other opportunities relevant to immigrants, refugees, and newcomers.
 - **Scholarships:** retain and improve education funding information.
 - **About and contact:** explain the site's purpose, content standards, and how to report outdated information.
 
@@ -66,6 +71,8 @@ The existing landing page lists English, French, Swahili, Spanish, Arabic, Kirun
 - Add client-side routing for the site's major sections and ensure direct links and refreshes work on nested routes.
 - Move localized UI strings into structured translation files and keep non-UI content in a format editors can maintain.
 - Convert existing education data and page interactions into typed/validated data and React state; remove direct DOM mutation and Google Translate widget dependencies.
+- Provide a career-roadmap interaction that accepts arbitrary career titles and adapts steps to the visitor's education, experience, state, timeline, and priority. Link to occupation-specific research and authoritative external resources, but do not imply that the generated roadmap confirms licensing or qualification requirements.
+- Define an event data model and ingestion process that supports trusted feeds, APIs, and partner submissions, with source attribution, duplicate handling, freshness checks, event expiration, and a correction/reporting path. Respect source terms and avoid collecting visitors' immigration status.
 - Keep the existing stylesheet and visual identity as a migration starting point; update branding and design deliberately rather than coupling redesign to the framework conversion.
 - Choose and document test, lint, and build commands when the app scaffold and package manager are selected.
 
@@ -77,19 +84,22 @@ The existing landing page lists English, French, Swahili, Spanish, Arabic, Kirun
 - Identify the initial audience, top user needs, launch topics, and geographic scope.
 - Audit existing pages, links, images, education data, and content for accuracy, duplication, accessibility, and migration value.
 - Confirm hosting, existing analytics/privacy constraints, and whether any services or forms need a backend.
+- Identify reliable event providers and permitted data sources; determine initial state coverage, update frequency, event review responsibilities, and whether partner submissions or a backend are needed.
 - Prioritize initial languages based on audience needs and the ability to obtain human review.
 
-**Exit criteria:** brand direction, initial scope, language priorities, and hosting constraints are documented.
+**Exit criteria:** brand direction, initial scope, language priorities, hosting constraints, and an initial event-source/coverage plan are documented.
 
 ### 2. React foundation
 
 - Create the React app and establish local development, production build, and deployment workflows.
 - Implement shared layout, navigation, routing, responsive behavior, and accessible page landmarks.
 - Prototype one guided pathway and one searchable resource directory to validate the interactive experience early.
+- Assess event-data sources and document a small, maintainable pilot before promising broad or nationwide coverage.
 - Migrate the current pages and preserve working links and useful features.
 - Replace imperative JavaScript behavior, including the state-based education results, with React components and state.
+- Add an accessible career-roadmap builder that accepts any career title and uses the visitor's education, experience, target state, timeline, and priority to create tailored research, training, licensing, funding, and experience steps; allow visitors to mark steps complete and link to authoritative resources.
 
-**Exit criteria:** migrated pages build successfully, are reachable directly by URL, and work on mobile and desktop; the guided pathway and resource search work with keyboard and touch input.
+**Exit criteria:** migrated pages build successfully, are reachable directly by URL, and work on mobile and desktop; the guided pathway, resource search, and personalized career plan work with keyboard and touch input and clearly distinguish tailored guidance from verified occupation-specific requirements.
 
 ### 3. Localization foundation and language landing
 
@@ -111,11 +121,22 @@ The existing landing page lists English, French, Swahili, Spanish, Arabic, Kirun
 
 **Exit criteria:** every launch topic has a clear audience, actionable guidance, credible sources, and a review owner.
 
-### 5. Quality, release, and iteration
+### 5. Event finder: source pilot and release
+
+- Start with a limited set of states and trusted organizations or public event feeds; expand only when sources can be maintained reliably.
+- Define event categories and a consistent listing format for title, description, date and time zone, state/location or online access, cost, language, audience/eligibility when stated, source link, and last-checked date.
+- Ingest only from sources that permit reuse, such as documented APIs, public feeds, or explicit partner submissions. Keep source attribution and link visitors to the original listing for details and registration.
+- Filter and search listings by state, topic, and date, with optional filters for format, cost, or language when source data supports them. Let visitors skip location selection.
+- Establish validation, duplicate detection, update cadence, automatic expiry for past events, and a visible correction/reporting process. Label listings as informational rather than guaranteeing suitability, safety, availability, or eligibility.
+
+**Exit criteria:** the pilot displays attributable, current listings from permitted sources for its declared state coverage; visitors can filter results and reach the original provider; expired and reported listings have a defined handling process; no immigration-status information is requested.
+
+### 6. Quality, release, and iteration
 
 - Check keyboard navigation, screen-reader semantics, color contrast, responsive layouts, and right-to-left rendering.
 - Test routing, language selection and persistence, missing translations, forms, and data-driven resource views.
 - Test guided pathways, resource search and filters, and optional checklist persistence, including clearing saved progress.
+- Test event search and filters, state selection, source attribution, stale and expired listings, correction reports, and privacy-preserving behavior.
 - Check links, page metadata, loading performance, and production deployment behavior.
 - Release a limited set of reviewed content and languages, gather newcomer and community-partner feedback, and prioritize improvements.
 
@@ -133,6 +154,7 @@ The existing landing page lists English, French, Swahili, Spanish, Arabic, Kirun
 
 - Visitors can select, change, and retain a supported language across all released pages.
 - Visitors can find a relevant first step and navigate to an authoritative resource without needing to understand English.
+- Visitors can find current, source-attributed events and opportunities for a selected state, with clear coverage limits and eligibility details where known.
 - Visitors can complete a guided pathway, find relevant resources with search or filters, and optionally track checklist progress without creating an account.
 - Core tasks work with keyboard and assistive technology and on small screens.
 - Published guidance has traceable sources, review dates, and an update owner.

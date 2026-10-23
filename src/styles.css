@@ -321,10 +321,30 @@ h1 span {
 .guide-header {
   min-height: 86px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   gap: 24px;
   border-bottom: 1px solid var(--line);
+}
+
+.guide-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 15px;
+}
+
+.guide-nav a {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.guide-nav a:hover {
+  color: var(--green);
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 .guide-language-control {
@@ -557,6 +577,225 @@ h1 span {
   padding: 54px 0 46px;
 }
 
+.career-roadmap {
+  padding: 24px;
+  border: 1px solid var(--line);
+  background: #eef1ec;
+}
+
+.career-roadmap-heading h2 {
+  margin-bottom: 6px;
+  font-family: "Manrope", sans-serif;
+  font-size: 22px;
+}
+
+.career-roadmap-heading p:last-child {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.career-search-form {
+  margin-top: 20px;
+}
+
+.career-profile-fields {
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.career-profile-fields label {
+  min-width: 0;
+  display: grid;
+  gap: 7px;
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.career-profile-fields select {
+  width: 100%;
+  min-height: 44px;
+  padding: 0 10px;
+  border: 1px solid #c8d0c9;
+  border-radius: 3px;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+  font-size: 12px;
+}
+
+.career-search-form > label {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.career-search-controls {
+  display: flex;
+  gap: 9px;
+}
+
+.career-search-controls input {
+  flex: 1;
+  min-width: 0;
+  min-height: 46px;
+  padding: 0 12px;
+  border: 1px solid #c8d0c9;
+  border-radius: 3px;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+  font-size: 13px;
+}
+
+.career-search-controls button {
+  min-height: 46px;
+  padding: 0 17px;
+  border: 1px solid var(--green);
+  border-radius: 3px;
+  background: var(--green);
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.career-search-controls button:hover {
+  background: var(--green-dark);
+}
+
+.career-form-help,
+.career-form-error {
+  margin: 7px 0 0;
+  font-size: 11px;
+}
+
+.career-form-help {
+  color: var(--muted);
+}
+
+.career-form-error {
+  color: #9b3022;
+}
+
+.career-roadmap-results {
+  margin-top: 26px;
+  padding-top: 22px;
+  border-top: 1px solid #c8d0c9;
+}
+
+.career-roadmap-results > h3 {
+  margin-bottom: 8px;
+  font-family: "Manrope", sans-serif;
+  font-size: 18px;
+}
+
+.career-roadmap-results > h3 span {
+  color: var(--green);
+}
+
+.career-roadmap-note {
+  max-width: 800px;
+  margin-bottom: 16px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.career-roadmap-steps {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  list-style: none;
+}
+
+.career-roadmap-step {
+  min-width: 0;
+  padding: 0;
+  border: 1px solid var(--line);
+  background: rgb(255 255 255 / 78%);
+}
+
+.career-step-main {
+  padding: 15px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 10px;
+}
+
+.career-step-check {
+  min-width: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  cursor: pointer;
+}
+
+.career-step-check input {
+  flex: 0 0 auto;
+  width: 17px;
+  height: 17px;
+  margin: 4px 0 0;
+  accent-color: var(--green);
+}
+
+.career-step-number {
+  flex: 0 0 26px;
+  width: 26px;
+  height: 26px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #eaf1ed;
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.career-step-content {
+  min-width: 0;
+  display: grid;
+  gap: 5px;
+}
+
+.career-step-title {
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.career-step-description {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.career-step-resource {
+  justify-self: start;
+  margin-left: 54px;
+  color: var(--green);
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.career-progress {
+  margin: 0 0 12px;
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 700;
+}
+
 .education-back-link {
   color: var(--green);
   font-size: 13px;
@@ -733,6 +972,270 @@ h1 span {
   font-weight: 700;
 }
 
+.content-main {
+  flex: 1;
+  padding: 48px 0;
+}
+
+.content-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(260px, 0.9fr);
+  align-items: center;
+  gap: clamp(24px, 5vw, 64px);
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--line);
+}
+
+.content-hero h1 {
+  font-size: clamp(36px, 4vw, 50px);
+}
+
+.content-hero p:not(.eyebrow),
+.content-copy,
+.family-section > div > p:last-child {
+  max-width: 680px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.content-hero img,
+.family-section img {
+  width: 100%;
+  max-height: 390px;
+  object-fit: cover;
+}
+
+.content-section {
+  padding: 36px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.content-section h2 {
+  margin-bottom: 14px;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(23px, 3vw, 30px);
+}
+
+.content-section > .eyebrow {
+  margin-bottom: 9px;
+}
+
+.content-section-muted {
+  margin-right: -5.5vw;
+  margin-left: -5.5vw;
+  padding: 36px 5.5vw;
+  background: #eef1ec;
+}
+
+.content-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.content-card {
+  min-width: 0;
+  padding: 20px;
+  border: 1px solid var(--line);
+  background: rgb(255 255 255 / 72%);
+}
+
+.content-card h3 {
+  margin: 0 0 8px;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+}
+
+.content-card p,
+.content-card li,
+.scholarship-steps p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.content-card p:last-child {
+  margin-bottom: 0;
+}
+
+.content-card ul {
+  padding-left: 19px;
+}
+
+.content-card a,
+.contact-panel a {
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.content-card .resource-link-list {
+  padding-left: 0;
+  list-style: none;
+}
+
+.resource-link-list li + li {
+  margin-top: 12px;
+}
+
+.resource-link-list p {
+  margin: 4px 0 0;
+}
+
+.content-caution {
+  padding: 13px 15px;
+  border-left: 3px solid #c55e43;
+  background: #fff;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.content-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.content-cta h2,
+.content-cta p {
+  margin-bottom: 5px;
+}
+
+.content-cta p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.content-cta .continue-link {
+  flex: 0 0 auto;
+  margin: 0;
+}
+
+.content-cta-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.contact-panel {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  background: #eef1ec;
+}
+
+.contact-panel h2 {
+  margin-bottom: 7px;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+}
+
+.contact-panel p {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.contact-panel .contact-note {
+  grid-column: 1 / -1;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+  font-size: 12px;
+}
+
+.scholarship-steps {
+  margin: 18px 0 0;
+  padding-left: 22px;
+  display: grid;
+  gap: 14px;
+}
+
+.scholarship-steps li {
+  padding-left: 5px;
+}
+
+.scholarship-steps strong {
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+}
+
+.scholarship-steps p {
+  margin: 5px 0 0;
+}
+
+.family-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) repeat(2, minmax(130px, 0.45fr));
+  align-items: center;
+  gap: 16px;
+}
+
+.family-section img {
+  height: 190px;
+}
+
+.everyday-culture-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 0.7fr);
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 18px;
+}
+
+.everyday-culture-intro > div > p:last-child {
+  max-width: 680px;
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.everyday-culture-intro figure {
+  margin: 0;
+}
+
+.everyday-culture-intro img {
+  display: block;
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+
+.everyday-culture-intro figcaption {
+  padding-top: 7px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.culture-examples {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.culture-example {
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+}
+
+.culture-note {
+  margin: 14px 0 0;
+  padding: 13px 15px;
+  border-left: 3px solid var(--green);
+  background: #eef1ec;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
 @keyframes rise-in {
   from {
     opacity: 0;
@@ -820,7 +1323,16 @@ h1 span {
     align-items: flex-start;
     flex-direction: column;
     justify-content: center;
-    gap: 8px;
+    gap: 12px;
+    padding: 14px 0;
+  }
+
+  .guide-nav {
+    gap: 8px 13px;
+  }
+
+  .guide-nav a {
+    font-size: 11px;
   }
 
   .education-header-actions {
@@ -837,6 +1349,43 @@ h1 span {
 
   .guide-language-control select {
     max-width: 190px;
+  }
+
+  .content-main {
+    padding: 38px 0 28px;
+  }
+
+  .content-hero,
+  .content-card-grid,
+  .everyday-culture-intro,
+  .culture-examples,
+  .contact-panel,
+  .family-section {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .content-hero img {
+    max-height: 280px;
+  }
+
+  .content-section-muted {
+    margin-right: -20px;
+    margin-left: -20px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .content-cta {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .contact-panel .contact-note {
+    grid-column: auto;
+  }
+
+  .family-section img {
+    height: 220px;
   }
 
   .guide-main {
@@ -901,7 +1450,21 @@ h1 span {
   }
 
   .directory-filters,
-  .resource-results {
+  .resource-results,
+  .career-roadmap-steps {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .career-roadmap {
+    padding: 18px 15px;
+  }
+
+  .career-search-controls {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .career-profile-fields {
     grid-template-columns: minmax(0, 1fr);
   }
 
